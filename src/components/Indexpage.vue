@@ -1,40 +1,63 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="wrapper">
+  <div class="main-wrap">
+    <div id="wsite-content" class="wsite-elements wsite-not-footer">
+      <div class="wsite-section-wrap">
+        <div class="wsite-section wsite-body-section wsite-background-2" style="height: auto;" >
+          <div class="wsite-section-content">
+            <div class="container">
+              <div class="wsite-section-elements">
+                <div class="wsite-spacer" style="height:10px;"></div>
+                <h2 class="wsite-content-title" style="text-align:center;"><font color="#78a163">The philosophy of our system is based on simplicity, sustainability and the effective distribution of a sensitive fruit like banana.</font></h2>
+                <div class="wsite-spacer" style="height:10px;"></div>
+                <div>
+                  <div class="wsite-multicol">
+                    <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+                      <table class="wsite-multicol-table">
+                      <tbody class="wsite-multicol-tbody">
+                      <tr class="wsite-multicol-tr">
+                      <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+                      <div>
+                        <div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+                          <a><img src="../uploads/1/00/8/5/108537385/published/ph-cover1.jpg?1500116268" alt="Picture" style="width:auto;max-width:100%" /></a>
+                          <div style="display:block;font-size:90%"></div>
+                        </div>
+                      </div>
+                      </td>
+                      <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+                      <div>
+                        <div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+                          <a><img src="../uploads/1/00/8/5/108537385/ph-cover2_orig.jpg" alt="Picture" style="width:auto;max-width:100%" /></a>
+                          <div style="display:block;font-size:90%"></div>
+                        </div>
+                      </div>
+                      <div class="wsite-youtube" style="margin-bottom:10px;margin-top:0px;">
+                        <div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+                          <div class="wsite-youtube-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/GsgpSBAcWjQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      </td>
+                      </tr>
+                      </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'Indexpage',
   props: {
     msg: String
   }
@@ -43,18 +66,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
 </style>

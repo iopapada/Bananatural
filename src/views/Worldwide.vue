@@ -1,9 +1,9 @@
 <template>
-    <Usagepage/>
+    <Patentinfo/>
 </template>
 
 <script>
-import Usagepage from '@/components/Usagepage.vue'
+import Patentinfo from '@/components/Patentinfo.vue'
 
 export default {
   name: 'Usage',
@@ -16,7 +16,7 @@ export default {
   methods: {
   },
   components: {
-    Usagepage
+    Patentinfo
   }
 }
 </script>

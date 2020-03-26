@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Index',
+    name: 'Home',
     component: Home
   },
   {
@@ -29,6 +29,11 @@ const routes = [
     path: '/usage',
     name: 'Usage',
     component: () => import('../views/Usage.vue')
+  },
+  {
+    path: '/worldwide',
+    name: 'Worldwide',
+    component: () => import('../views/Worldwide.vue')
   }
 ]
 

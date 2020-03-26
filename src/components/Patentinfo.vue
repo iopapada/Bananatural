@@ -1,16 +1,31 @@
 <template>
-  <div id="patent-map" class="patent"></div>
+<div class="wrapper">
+  <div class="main-wrap">
+    <div id="wsite-content" class="wsite-elements wsite-not-footer">
+      <div class="wsite-section-wrap">
+        <div class="wsite-section wsite-body-section wsite-background-7"  >
+          <div class="wsite-section-content">
+            <div class="container">
+              <div class="wsite-section-elements">
+                  <div class="wsite-spacer" style="height:10px;"></div>
+                  <div id="patent-map" class="patent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
 import gmapsInit from "./../utils/gmaps";
-import allCountriesJSON from "./../assets/allCountriesCoordinates.json";
-import patentCountriesJSON from "./../assets/patentCountriesCoordinates.geo.json";
-//import { connect } from "net";
-//import $ from jquery;
+import allCountriesJSON from "./../files/assets/allCountriesCoordinates.json";
+import patentCountriesJSON from "./../files/assets/patentCountriesCoordinates.geo.json";
 
 export default {
-  //name: "patent",
+  name: "Patentinfo",
   data() {
     return {
       map: null,
@@ -35,7 +50,7 @@ export default {
         });
 
         this.map.data.addGeoJson(patentCountriesJSON);
-        this.map.data.setStyle(function(featurestyle) {
+        this.map.data.setStyle(function() {
           return {
             strokeColor: "#ff9900",
             strokeOpacity: 0.8,
@@ -46,16 +61,16 @@ export default {
         });
 
         google.maps.event.addListener(this.map, "mouseover", function(e) {
-          console.log("sdadasdasda");
-          // if (e.feature.getGeometry("type") === "MultiPolygon") {
-          //   this.setOptions({ fillOpacity: 0.5 });
-          // }
+          //console.log("sdadasdasda");
+          if (e.feature.getGeometry("type") === "MultiPolygon") {
+            this.setOptions({ fillOpacity: 0.5 });
+          }
         });
-        // google.maps.event.addListener(this.map, "mouseout", function(e) {
-        //   if (e.feature.getGeometry("type") === "MultiPolygon") {
-        //     this.setOptions({ fillOpacity: 0 });
-        //   }
-        // });
+        google.maps.event.addListener(this.map, "mouseout", function(e) {
+          if (e.feature.getGeometry("type") === "MultiPolygon") {
+            this.setOptions({ fillOpacity: 0 });
+          }
+        });
       } catch (error) {
         console.error(error);
       }

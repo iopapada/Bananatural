@@ -214,7 +214,7 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
  .commerce-elements-wrapper { padding: 0; }
  .product-grid-layout--over .product-grid__overlay, .product-grid-layout--hover .product-grid__overlay { background: rgba(255,255,255,0.8); color: #000000; -webkit-transition: all 260ms ease; -moz-transition: all 260ms ease; -ms-transition: all 260ms ease; transition: all 260ms ease; }
  .product-grid-layout--over .product-grid__overlay .product-grid-reset, .product-grid-layout--over .product-grid__overlay .product-grid__sale, .product-grid-layout--hover .product-grid__overlay .product-grid-reset, .product-grid-layout--hover .product-grid__overlay .product-grid__sale { color: #000000; }
- #blogTable .blog-post .blog-header h2.blog-title { font-family: ; font-size: 28px; font-weight: 400; letter-spacing: 0.015em; margin-bottom: 10px !important; }
+ #blogTable .blog-post .blog-header h2.blog-title {  font-size: 28px; font-weight: 400; letter-spacing: 0.015em; margin-bottom: 10px !important; }
  #blogTable .blog-post .blog-date, #blogTable .blog-post .blog-comments { float: left; color: rgba(0,0,0,0.6); font-size: 16px; }
  #blogTable .blog-post .blog-date { margin-right: 30px !important; }
  #blogTable .blog-post .blog-separator { margin: 0 auto 20px; border: none; }

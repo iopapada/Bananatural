@@ -1,5 +1,22 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <Benefitspage/>
 </template>
+
+<script>
+import Benefitspage from '@/components/Benefitspage.vue'
+
+export default {
+  name: 'Home',
+  data() {
+    return {
+    }
+  },
+  async mounted() {
+  },
+  methods: {
+  },
+  components: {
+    Benefitspage
+  }
+}
+</script>
