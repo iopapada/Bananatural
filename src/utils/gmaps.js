@@ -1,4 +1,6 @@
-const API_KEY = "";
+require('dotenv').config();
+
+const API_KEY = process.env.VUE_APP_API_KEY;
 const CALLBACK_NAME = "gmapsCallback";
 
 let initialized = !!window.google;

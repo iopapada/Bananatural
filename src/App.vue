@@ -1,9 +1,9 @@
 <template>
-  <body class="no-header-page  wsite-page-contact  nav-position-sidebar sticky-nav-on full-width-nav-on full-width-body-off header-overlay-on  wsite-theme-light">
+  <div>
     <Sidebar/>
-    <router-view/>
     <SidebarMobile/>
-  </body>
+    <router-view/>
+  </div>
 </template>
 
 <script>
@@ -11,16 +11,15 @@
   import SidebarMobile from './components/SidebarMobile'
 
   export default {
+    //name: "#app",
     // data() {
     //   return {
     //   }
     // },
-    // head: {
-    //   script: [
-    //     { src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' },
-    //     { src: "http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&", type: "text/javascript"},
-    //     { src: "http://cdn2.editmysite.com/js/site/main.js?buildTime=1234"}
-    //   ],
+    head: {
+    // script: [
+    //   { src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' }
+    // ]
     //   link: [
     //     { id:"wsite-base-style", rel: 'stylesheet', type:"text/css", href: 'http://cdn2.editmysite.com/css/sites.css?buildTime=1234' },
     //     { rel: 'stylesheet', type:"text/css", href: 'http://cdn2.editmysite.com/css/old/fancybox.css?1234' },
@@ -30,7 +29,16 @@
     //   meta: [
     //     {name:"viewport", content:"width=device-width, initial-scale=1.0"}
     //   ]
-    // },
+     },
+    watch: {
+      // datetime: function (newDatetime) {
+      //   this.datetimeString = newDatetime.format(this.datetimeFormat);
+      // },
+      // datetimeFormat: function (newFormat) {
+      //   this.datetimeString = this.datetime.format(newFormat);
+      //   localStorage.datetimeFormat = newFormat;
+      // }
+    },
     components: {
       Sidebar, SidebarMobile
     },
@@ -38,7 +46,7 @@
       
     },
     async created() {
-    
+      
     }
   }
 </script>
@@ -62,7 +70,12 @@
 }
 
 @media screen and (min-width: 767px) {
-.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {font-size:30px !important;}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, 
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, 
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, 
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, 
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, 
+#wsite-content .product-small .product-title, .blog-sidebar h2 {font-size:30px !important;}
 .wsite-product .wsite-product-price a {font-size:15px !important;}
 }
 </style>

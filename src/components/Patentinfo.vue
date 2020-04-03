@@ -49,7 +49,7 @@ export default {
           mapTypeId: google.maps.MapTypeId.TERRAIN
         });
 
-        this.map.data.addGeoJson(patentCountriesJSON);
+        this.countries=this.map.data.addGeoJson(patentCountriesJSON);
         this.map.data.setStyle(function() {
           return {
             strokeColor: "#ff9900",
@@ -59,17 +59,18 @@ export default {
             fillOpacity: 0.2
           };
         });
-
-        google.maps.event.addListener(this.map, "mouseover", function(e) {
-          //console.log("sdadasdasda");
-          if (e.feature.getGeometry("type") === "MultiPolygon") {
-            this.setOptions({ fillOpacity: 0.5 });
-          }
+        // google.maps.event.addListener(this.map, "mouseover", function(e) {
+        //   if (e.feature.getGeometry("type") === "MultiPolygon") {
+        //     this.setOptions({ fillOpacity: 0.5 });
+        //   }
+        // });
+        //let countries = this.map.data
+        //console.log(this.countries);
+        this.map.data.addListener("mouseover", function(e) {
+          this.overrideStyle(e.feature, {fillColor: 'red'});
         });
-        google.maps.event.addListener(this.map, "mouseout", function(e) {
-          if (e.feature.getGeometry("type") === "MultiPolygon") {
-            this.setOptions({ fillOpacity: 0 });
-          }
+        this.map.data.addListener("mouseout", function(e) {
+          this.overrideStyle(e.feature, {fillColor: '#ffff66'});
         });
       } catch (error) {
         console.error(error);

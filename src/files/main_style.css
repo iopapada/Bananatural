@@ -84,7 +84,7 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
  .nav { vertical-align: middle; }
  .nav a { display: block; color: #000000; font-family: "Roboto", Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 500; line-height: 1; letter-spacing: 0.05em; text-transform: lowercase; }
  .nav a:hover { opacity: 0.6; background: transparent; -webkit-transition: opacity 200ms ease; -moz-transition: opacity 200ms ease; -ms-transition: opacity 200ms ease; transition: opacity 200ms ease; }
- .nav .active { color: #097d7e !important; }
+ .nav a.router-link-active, .nav a.router-link-exact-active{ color: #097d7e !important; }
  .nav #wsite-nav-cart-a { padding-right: 0; }
  .nav #wsite-nav-cart-num { position: relative; display: inline-block; background: #6dcdce; color: #000000; min-width: 25px; padding: 7px 2px; text-align: center; border-radius: 100%; z-index: 2; }
  @media screen and (min-width: 64.0625em) {

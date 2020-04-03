@@ -11,7 +11,14 @@ export default {
     return {
     }
   },
+  beforeCreate: function() {
+    //document.body.className = 'no-header-page  wsite-page-patent  nav-position-sidebar sticky-nav-on full-width-nav-on full-width-body-off header-overlay-on  wsite-theme-light';
+  },
+  afterCreate(){
+
+  },
   async mounted() {
+      this.$nextTick().then(() => document.body.className = 'no-header-page  wsite-page-patent  nav-position-sidebar sticky-nav-on full-width-nav-on full-width-body-off header-overlay-on  wsite-theme-light fade-in');
   },
   methods: {
   },
@@ -19,4 +26,6 @@ export default {
     Patentpage
   }
 }
+
+
 </script>

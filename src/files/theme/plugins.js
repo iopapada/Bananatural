@@ -4,7 +4,7 @@
  *
  * Copyright (c) 2014 Jorik Tangelder;
  * Licensed under the MIT license */
-(function(window, document, exportName, undefined) {
+(function(window, document, exportName) {
   'use strict';
 
 var VENDOR_PREFIXES = ['', 'webkit', 'moz', 'MS', 'ms', 'o'];
@@ -67,7 +67,7 @@ function each(obj, iterator, context) {
         }
     } else {
         for (i in obj) {
-            obj.hasOwnProperty(i) && iterator.call(context, obj[i], i, obj);
+            Object.prototype.hasOwnProperty.call(obj,i) && iterator.call(context, obj[i], i, obj);
         }
     }
 }
@@ -1471,7 +1471,7 @@ Recognizer.prototype = {
      * @param {Object} inputData
      * @returns {Const} STATE
      */
-    process: function(inputData) { }, // jshint ignore:line
+    process: function() { }, // jshint ignore:line
 
     /**
      * return the preferred touch-action

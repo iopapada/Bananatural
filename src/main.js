@@ -5,8 +5,7 @@ import store from './store'
 
 window.$ = window.jQuery = require('jquery')
 
-import '@/files/main_style.css?1500119234'
-//import ('./files/theme/plugins.js')
+import ('./files/theme/plugins.js')
 import ('./files/theme/custom.js')
 
 Vue.config.productionTip = false

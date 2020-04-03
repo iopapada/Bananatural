@@ -1,4 +1,4 @@
-jQuery(function($) {
+window.jQuery(function($) {
 
   // Mobile sidebars
   $.fn.expandableSidebar = function(expandedClass) {
@@ -12,7 +12,6 @@ jQuery(function($) {
       }
     });
   }
-
   // Interval loop
   $.fn.intervalLoop = function(condition, action, duration, limit) {
     var counter = 0;
@@ -25,20 +24,16 @@ jQuery(function($) {
       }
     }, duration);
   }
-
   // Check if element exists
   $.fn.checkIfElementExists = function(selector) {
     return $(selector).length;
   }
-
   // Check if desktop display
-
   $.fn.isDesktop = function() {
     return $(window).width() > 1024;
   }
-
   var briskController = {
-    init: function(opts) {
+    init: function() {
       var base = this;
 
       base._addClasses();
@@ -49,13 +44,13 @@ jQuery(function($) {
     },
 
     _addClasses: function() {
-      var base = this;
+      //var base = this;
 
       // Add fade in class to nav + logo + banner
-      $('body').addClass('fade-in');
+      //$('body').addClass('fade-in');
 
       // Keep subnav open if submenu item is active
-      $('.sidebar-nav .active').parents('.has-submenu').children('.dropdown').addClass('open');
+      //$('.sidebar-nav .active').parents('.has-submenu').children('.dropdown').addClass('open');
 
       // Add placeholder text to inputs
       $('.wsite-form-sublabel').each(function(){
@@ -73,28 +68,28 @@ jQuery(function($) {
       var sticky,
           collapse,
           uncollapse,
-          desktopsticky = $('body.nav-position-top.sticky-nav-on:not(.wsite-checkout-page):not(.wsite-native-mobile-editor), body.nav-position-top-right.sticky-nav-on:not(.wsite-checkout-page):not(.wsite-native-mobile-editor)').length,
-          mobilesticky = $('body.sticky-nav-on:not(.wsite-checkout-page):not(.wsite-native-mobile-editor)').length;
+          desktopsticky = $('body.nav-position-top.sticky-nav-on:not(.wsite-checkout-page):not(.wsite-native-mobile-editor), body.nav-position-top-right.sticky-nav-on:not(.wsite-checkout-page):not(.wsite-native-mobile-editor)').length
+          //mobilesticky = $('body.sticky-nav-on:not(.wsite-checkout-page):not(.wsite-native-mobile-editor)').length;
 
       var stickyInit = function() {
         if (!$.fn.isDesktop() || desktopsticky) {
           // Add sticky desktop nav
-          sticky = new Waypoint.Sticky({
+          sticky = new window.Waypoint.Sticky({
             element: $('.header')[0]
           });
         }
         if ($.fn.isDesktop() && desktopsticky) {
           // Collapse header on scroll
-          collapse = new Waypoint({
+          collapse = new window.Waypoint({
             element: $('body.nav-position-top.sticky-nav-on:not(.wsite-checkout-page):not(.wsite-native-mobile-editor)')[0],
-            handler: function(direction) {
+            handler: function() {
               $('body').addClass('collapse');
             },
             offset: -10
           });
-          uncollapse = new Waypoint({
+          uncollapse = new window.Waypoint({
             element: $('body.nav-position-top'),
-            handler: function(direction) {
+            handler: function() {
               $('body').removeClass('collapse');
             },
             offset: -5
@@ -144,7 +139,7 @@ jQuery(function($) {
     },
 
     _attachEvents: function() {
-    	var base = this;
+      var base = this;
         // Hamburger nav toggle
         $('.hamburger').on('click', function() {
           $('body').toggleClass('nav-open');
@@ -156,7 +151,7 @@ jQuery(function($) {
         // Initialize sidebar nav
         base._sidebarNav();
 
-      	// Copy login
+        // Copy login
         $.fn.intervalLoop('.mobile-nav #member-login', base._cloneLogin, 800, 5);
 
         // Subnav toggle
@@ -184,7 +179,7 @@ jQuery(function($) {
       // Search filters dropdown
       $('#wsite-search-sidebar').expandableSidebar('sidebar-expanded');
 
-    	// Init fancybox swipe on mobile
+      // Init fancybox swipe on mobile
       if ('ontouchstart' in window) {
         $('body').on('click', 'a.w-fancybox', function() {
           base._initSwipeGallery();
@@ -197,7 +192,7 @@ jQuery(function($) {
 
       setTimeout(function(){
         var touchGallery = document.getElementsByClassName('fancybox-wrap')[0];
-        var mc = new Hammer(touchGallery);
+        var mc = new window.Hammer(touchGallery);
         mc.on("panleft panright", function(ev) {
           if (ev.type == "panleft") {
             $("a.fancybox-next").trigger("click");
@@ -211,6 +206,6 @@ jQuery(function($) {
   }
 
   $(document).ready(function(){
-  	briskController.init();
+    briskController.init();
   });
 });

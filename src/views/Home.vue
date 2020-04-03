@@ -11,7 +11,15 @@ export default {
     return {
     }
   },
+  beforeCreate: function() {
+      //document.body.className = 'no-header-page  wsite-page-index  nav-position-sidebar sticky-nav-on full-width-nav-on full-width-body-off header-overlay-on  wsite-theme-light';
+  },
+  beforeLeave: function() {
+
+  },
   async mounted() {
+      this.$nextTick().then(() => document.body.className = 'no-header-page  wsite-page-index  nav-position-sidebar sticky-nav-on full-width-nav-on full-width-body-off header-overlay-on  wsite-theme-light fade-in');
+      //this.$nextTick().then(() => document.body.classList.add('fade-in'))
   },
   methods: {
   },
@@ -19,4 +27,6 @@ export default {
     Indexpage
   }
 }
+
+
 </script>
