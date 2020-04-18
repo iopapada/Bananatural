@@ -21,20 +21,26 @@
                                         <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
                                         <div>
                                             <div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:left">
-                                                <a href='../uploads/1/00/8/5/108537385/ph-description1_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+                                                <a href='#img1'>
                                                 <img src="../uploads/1/00/8/5/108537385/ph-description1_1_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
                                                 </a>
                                                 <div style="display:block;font-size:90%">The stand’s height can be adjustable depending on the size of the banana bunch.</div>
+                                                <a href="#_" class="lightbox" id="img1">
+                                                <img src="../uploads/1/00/8/5/108537385/ph-description1_1_orig.jpg">
+                                                </a>
                                             </div>
                                         </div>
                                         </td>
                                         <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
                                         <div>
                                             <div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:left">
-                                                <a href='../uploads/1/00/8/5/108537385/ph-description2_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+                                                <a href='#img2'>
                                                 <img src="../uploads/1/00/8/5/108537385/ph-description2_1_orig.jpg" alt="Picture" style="width:545;max-width:100%" />
                                                 </a>
                                                 <div style="display:block;font-size:90%">The stands with the banana bunches in different heights.</div>
+                                                <a href="#_" class="lightbox" id="img2">
+                                                <img src="../uploads/1/00/8/5/108537385/ph-description2_1_orig.jpg">
+                                                </a>
                                             </div>
                                         </div>
                                         </td>
@@ -56,20 +62,26 @@
                                             <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
                                                 <div>
                                                     <div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:left">
-                                                        <a href='../uploads/1/00/8/5/108537385/ph-description3_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+                                                        <a href='#img3'>
                                                         <img src="../uploads/1/00/8/5/108537385/ph-description3_1_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
                                                         </a>
                                                         <div style="display:block;font-size:90%">The wagon’s height is adjustable depending on the height of the stands.</div>
+                                                        <a href="#_" class="lightbox" id="img3">
+                                                        <img src="../uploads/1/00/8/5/108537385/ph-description3_1_orig.jpg">
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
                                             <div>
                                                 <div class="wsite-image wsite-image-border-none " style="padding-top:0px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:left">
-                                                    <a href='../uploads/1/00/8/5/108537385/ph-description4_1_orig.jpg' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+                                                    <a href='#img4'>
                                                     <img src="../uploads/1/00/8/5/108537385/ph-description4_1_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
                                                     </a>
                                                     <div style="display:block;font-size:90%">1 wagon can carry 12 stands. In the picture 2 wagons carry 24 stands.</div>
+                                                    <a href="#_" class="lightbox" id="img4">
+                                                    <img src="../uploads/1/00/8/5/108537385/ph-description4_1_orig.jpg">
+                                                    </a>
                                                 </div>
                                             </div>
                                             </td>
@@ -92,12 +104,15 @@
 </div>
 </template>
 <script>
+//import $ from 'jquery'
+//var $ = require("jquery");
+
 export default {
   name: 'Patentpage'
 }
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 
 </style>
