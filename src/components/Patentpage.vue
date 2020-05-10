@@ -104,8 +104,6 @@
 </div>
 </template>
 <script>
-//import $ from 'jquery'
-//var $ = require("jquery");
 
 export default {
   name: 'Patentpage'

@@ -40,18 +40,17 @@ export default {
 nav {
     height:100px;
     width:100%;
-    box-shadow: 1px 1px 1px #333;
+    border-bottom: 2px solid rgba(0,0,0,0.05);
+    //box-sizing: 1px 1px 1px #333;
 
     ul {
         display: flex;
         height: 100%;
-        //width: 100%;
-        //align-content: right;
         align-items: center;
         margin-block-start: 0;
         margin-block-end: 0;
         padding-inline-start: 0;
-        box-shadow: 1px 1px 1px #333;
+        border-right: 2px solid rgba(0,0,0,0.05);
 
         figure {
             cursor: pointer;
@@ -80,22 +79,28 @@ nav {
 @media screen and (max-width: 859px){
     nav {
         ul {
-            position: absolute;
+            position: fixed;
             width: 180px;
             flex-direction: column;
             left:-120px;
-            //height: 100%;
-            transition: 300ms ease all;
+            transition: 200ms ease all;
             top: 99px;
+            z-index: 1;
             &.active {
                 left: 0px;
+                    figure {
+                    position: absolute;
+                    z-index: 1;
+                    top: -115px;
+                    left: -40px;
+                }
             }
 
             figure {
-                position: fixed;
+                position: absolute;
                 z-index: 1;
-                top: 10px;
-                left: 2px;
+                top: -115px;
+                left: 80px;
             }
 
             li {
