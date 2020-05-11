@@ -1,7 +1,7 @@
 # Bananatural
 A simple site for a company promoting his first patnet. First of all there was need for transforming the old HTML site into a Vue.js project.
 
-<img src="Demo/old2.png" width="45%"></img> 
+<img src="Demo/old22.png" width="45%" alt="ttt" title="adam solomon's hello"></img> 
 <img src="Demo/new2.png" width="45%"></img> 
 
 <img src="Demo/old1.png" width="45%"></img> 
