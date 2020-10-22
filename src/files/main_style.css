@@ -14,6 +14,7 @@ ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fields
  p a:hover { opacity: 0.4; }
 
  .main-wrap { width: 100%; }
+ .wrapper {padding: 0 15px;}
  .wrapper .container { position: relative; width: 100%; max-width: 1200px; padding: 40px; margin: 0 auto; overflow: hidden; box-sizing: border-box; }
  
  .logo * { display: block; }
@@ -31,9 +32,10 @@ div.paragraph ul li { list-style: disc outside !important; }
 div.paragraph ol, 
 div.paragraph ol li { list-style: decimal outside !important; }
 
- @media screen and (max-width: 1024px) {
+ /* @media screen and (max-width: 1024px) {
  .main-wrap .container { padding: 30px 20px; }
- }
+ } */
+ 
  @media screen and (max-width: 859px) {
 table, table td, table tr, table th { display: block; text-align: left; margin: 0px 10px; } 
 table th, table td { margin: 0; padding-left: 25px;  }
